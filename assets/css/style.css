@@ -1,0 +1,26 @@
+/*
+.carouserl-size {
+    height: 100vh;
+}
+*/
+
+body {
+    scroll-behavior: smooth;
+}
+
+div i {
+    color: #ffffff;
+}    
+
+.card img {
+    height: 180px;
+}
+
+.anchorNav {
+    text-shadow: 2px 2px 10px black;
+}
+
+.anchorNav {
+background-color:rgba(13, 202, 240, 0.8);
+border-radius: 20px;
+}
