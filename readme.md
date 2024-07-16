@@ -1,10 +1,13 @@
 ## Tabla de contenidos
-- Página Viajes Chile(#página-viajes-chile-)
-  - [Descripción del proyecto](#descripción-del-proyecto)
-  - [Instalación](#instalación)
-  - [Tecnologías utilizadas](#tecnologías-utilizadas)
-  - [Estructura del proyecto](#estructura-del-proyecto)
-  - [Funciones](#funciones)
+
+- [Página Viajes Chile ](#página-viajes-chile-)
+  - [📰 Descripción del proyecto 📰](#-descripción-del-proyecto-)
+  - [💻 Instalación 💻](#-instalación-)
+  - [👩‍💻 Tecnologías utilizadas 👩‍💻](#-tecnologías-utilizadas-)
+  - [💀 Estructura del proyecto 💀](#-estructura-del-proyecto-)
+  - [💡 Funciones 💡](#-funciones-)
+
+***
   
 # [Página Viajes Chile]( https://danielmunozlorca.github.io/Prueba_Viajes_Chile/) <img src="./assets/img/viajes.svg" height=35 >
 
