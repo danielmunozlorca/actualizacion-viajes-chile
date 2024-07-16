@@ -8,6 +8,13 @@
 
     <script src="https://kit.fontawesome.com/cff553d698.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/svg" href="./assets/img/viajes.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,7 +25,7 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark">
             <div class="container">
 
                 <a class="navbar-brand anchorNav p-2" href="#"><span class="display-5">
@@ -87,11 +94,11 @@
     <!--Los section van dentro del article según retroalimentación -->
     <article class="text-white bg-dark p-5">
         <section class="d-none d-md-block" id="sectionAboutUs">
-            <h2 class="text-center m-4">¿QUIÉNES SOMOS?</h2>
+            <h2 class="text-center m-4 fw-normal">¿QUIÉNES SOMOS?</h2>
             <hr>
             <div class="row mt-5">
-                <div class="col-12 col-md-4 text-center">
-                    <div class="div-iconos bg-info"><i class="fa-solid fa-plane fa-2x m-1"></i></div>
+                <div class="col-12 col-md-4">
+                    <div class="div-iconos bg-info text-center mb-2"><i class="fa-solid fa-plane fa-2x m-1"></i></div>
                     <p>En Viajes Chile, nos apasiona crear experiencias de viaje inolvidables. Por
                         eso, hemos diseñado una amplia gama de convenios y beneficios exclusivos para que puedas
                         planificar tu aventura por Chile de la manera más conveniente y económica posible. Accede a
@@ -106,7 +113,7 @@
 
                     </p>
                 </div>
-                <div class="col-4 text-center">
+                <div class="col-4">
                     <p> Chile te invita a descubrir una tierra de contrastes, donde la naturaleza se despliega en toda
                         su majestuosidad. Desde la mística Isla de Pascua, hogar de los enigmáticos moáis y sus leyendas
                         ancestrales, hasta la gélida Antártida, un continente de hielo y glaciares donde la vida se abre
@@ -118,10 +125,10 @@
                         mediterráneo ideal, degustando vinos de renombre mundial. Aventura en la Patagonia chilena,
                         navegando por sus fiordos y glaciares milenarios, o adéntrate en los bosques milenarios de la
                         Araucanía, donde la cultura indígena aún vive con fuerza.</p>
-                    <div class="div-iconos bg-info"><i class="fa-solid fa-mountain fa-2x m-1"></i></div>
+                    <div class="div-iconos bg-info text-center"><i class="fa-solid fa-mountain fa-2x m-1"></i></div>
                 </div>
-                <div class="col-4 text-center">
-                    <div class="div-iconos bg-info"><i class="fa-solid fa-route fa-2x m-1"></i></div>
+                <div class="col-4">
+                    <div class="div-iconos bg-info text-center mb-2"><i class="fa-solid fa-route fa-2x m-1"></i></div>
                     <p>Para planificar tu viaje perfecto, contacta con nuestra agencia de viajes. Puedes visitarnos en
                         nuestras oficinas ubicadas en las principales ciudades de Chile: Santiago, Valparaíso,
                         Concepción, Temuco, Puerto Montt y Punta Arenas. También puedes contactarnos a través de nuestro
@@ -137,7 +144,7 @@
         </section>
 
         <section id="sectionDestacados">
-            <h2 class="text-center mt-5 mb-4">DESTACADOS</h2>
+            <h2 class="text-center mt-5 mb-4 fw-normal">DESTACADOS</h2>
             <hr>
             <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
                 <div class="col">
@@ -186,7 +193,7 @@
         </section>
 
         <section id="sectionContacto">
-            <h2 class="text-center m-3">CONTACTO</h2>
+            <h2 class="text-center m-3 fw-normal">CONTACTO</h2>
             <hr>
             <form>
                 <div class="mb-3">
@@ -203,7 +210,7 @@
                 </div>
 
                 <button data-bs-toggle="mensaje" data-bs-title="Presiona para enviar" data-bs-placement="bottom"
-                    type="submit" class="btn btn-info text-white">Enviar</button>
+                    type="submit" class="btn btn-info text-white" id="enviarForm">Enviar</button>
             </form>
         </section>
     </article>
@@ -213,20 +220,20 @@
     <footer class="p-2 bg-info">
         <div class="row">
             <div class="col-6 div-footer text-white text-center mt-2">
-                <h4>VIAJES CHILE</h4>
+                <h3 class="fw-normal">VIAJES CHILE</h3>
             </div>
-            <div class="col-6 text-center mt-2">
+            <div class="col-6 text-center mt-1">
                 <a data-bs-toggle="mensaje" data-bs-title="ir a GitHub" data-bs-placement="top"
-                    href="https://github.com/" target="_blank"><i class="fa-brands fa-github m-1"></i></a>
+                    href="https://github.com/" target="_blank"><i class="fa-brands fa-github m-1 fa-2x"></i></a>
                 <a data-bs-toggle="mensaje" data-bs-title="ir a LinkedIn" data-bs-placement="top"
                     href="https://www.linkedin.com/in/munozlorcadaniel" target="_blank"><i
-                        class="fa-brands fa-linkedin m-1"></i></a>
+                        class="fa-brands fa-linkedin m-1 fa-2x"></i></a>
                 <a data-bs-toggle="mensaje" data-bs-title="ir a X" data-bs-placement="top"
                     href="https://x.com/Danish_mlorc" target="_blank"><i
-                        class="fa-brands fa-square-twitter m-1"></i></a>
+                        class="fa-brands fa-square-twitter m-1 fa-2x"></i></a>
                 <a data-bs-toggle="mensaje" data-bs-title="ir a Facebook" data-bs-placement="top"
                     href="https://www.facebook.com/daniel.munozlorca/" target="_blank"><i
-                        class="fa-brands fa-facebook m-1"></i></a>
+                        class="fa-brands fa-facebook m-1 fa-2x"></i></a>
             </div>
         </div>
         </div>
@@ -242,6 +249,16 @@
 
     <script src="./assets/js/script.js"></script>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $("#enviarForm").click(function () {
+            alert("El mensaje fué enviado correctamente");
+        });
+    </script>
 
 </body>
 
