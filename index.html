@@ -11,24 +11,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
     <!-- El header está compuesto por el navbar y el carousel de bootstrap -->
     <header>
-        <nav class="navbar navbar-expand-md fixed-top navbar-dark">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
             <div class="container">
-
-                <a class="navbar-brand anchorNav p-2" href="#"><span class="display-5">
+                <a class="navbar-brand anchor__nav p-2" href="#"><span class="display-5">
                         <h4><img class="align-middle" src="./assets/img/viajes.svg" width="40vw" alt="">
                             Viajes Chile</h4>
                     </span>
@@ -41,39 +35,58 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto">
-                        <a class="nav-link active anchorNav m-1" aria-current="page" href="#">Inicio</a>
-                        <a class="nav-link active anchorNav m-1" href="#sectionAboutUs">Quienes Somos</a>
-                        <a class="nav-link active anchorNav m-1" href="#sectionDestacados">Destacados</a>
-                        <a class="nav-link active anchorNav m-1" href="#sectionContacto">Contacto</a>
+                        <a class="nav-link active anchor__nav m-1" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active anchor__nav m-1" href="#sectionAboutUs">Quienes Somos</a>
+                        <a class="nav-link active anchor__nav m-1" href="#sectionDestacados">Destacados</a>
+                        <a class="nav-link active anchor__nav m-1" href="#sectionContacto">Contacto</a>
 
                     </div>
                 </div>
             </div>
         </nav>
 
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner carouserl-size">
-                <div class="carousel-item active" data-bs-interval="5000" id="carousel-img">
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel__container pt-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner carousel__size">
+                <div class="carousel-item active" data-bs-interval="4000" id="carousel-img">
                     <div class="row">
-                        <div class="col d-md-flex">
-                            <img src="./assets/img/carousel1.jpg" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="5000" id="carousel-img">
-                    <div class="row">
-                        <div class="col d-md-flex">
-                            <img src="./assets/img/carousel2.jpg" class="d-block w-100" alt="...">
+                        <div class="col d-md-flex carousel__size-1">
+                            <img src="./assets/img/carousel1.jpg" class="d-block w-100 carousel__image" alt="...">
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Destinos Fabulosos</h5>
+                                <p>Confía en nuestra experiencia eligiendo el destino ideal para tí.</p>
+                            </div>
 
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="5000" id="carousel-img">
+                <div class="carousel-item" data-bs-interval="4000" id="carousel-img">
                     <div class="row">
                         <div class="col d-md-flex">
-
-                            <img src="./assets/img/carousel3.jpg" class="d-block w-100" alt="...">
-
+                            <img src="./assets/img/carousel2.jpg" class="d-block w-100 carousel__image" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Recuerdos Inolvidables</h5>
+                                <p>Contamos con sesiones de video y fotografía para recordar esos momentos mágicos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000" id="carousel-img">
+                    <div class="row">
+                        <div class="col d-md-flex">
+                            <img src="./assets/img/carousel3.jpg" class="d-block w-100 carousel__image" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Protección de Fauna Silvestre</h5>
+                                <p>Infórmate de nuestro programa de protección a especies en peligro</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,170 +104,356 @@
         </div>
     </header>
 
+
     <!--Los section van dentro del article según retroalimentación -->
     <article class="text-white bg-dark p-5">
-        <section class="d-none d-md-block" id="sectionAboutUs">
-            <h2 class="text-center m-4 fw-normal">¿QUIÉNES SOMOS?</h2>
+        <section class="" id="sectionAboutUs">
+            <h2 class="text-center m-4">¿Quienes somos?</h2>
             <hr>
             <div class="row mt-5">
-                <div class="col-12 col-md-4">
-                    <div class="div-iconos bg-info text-center mb-2"><i class="fa-solid fa-plane fa-2x m-1"></i></div>
-                    <p>En Viajes Chile, nos apasiona crear experiencias de viaje inolvidables. Por
-                        eso, hemos diseñado una amplia gama de convenios y beneficios exclusivos para que puedas
-                        planificar tu aventura por Chile de la manera más conveniente y económica posible. Accede a
-                        descuentos especiales en pasajes aéreos y terrestres, estadías en hoteles y hostales de
-                        diferentes categorías, tours y actividades guiadas, y mucho más.
-                        Explora la diversidad de paisajes que Chile tiene para ofrecerte y disfruta de experiencias
-                        únicas a precios imperdibles.
-                        Paga en 3 o 12 cuotas sin interés y canjea puntos de los principales comercios. Además hay
-                        convenio en transporte privado desde y hacia el aeropuerto, con seguro de accidente incluido.
-
-                    </p>
+                <div class="d-none d-md-block col-md-6">
+                    <img src="./assets/img/quienes-somos.jpg" class="img-fluid" alt="...">
                 </div>
-                <div class="col-4">
-                    <p> Chile te invita a descubrir una tierra de contrastes, donde la naturaleza se despliega en toda
-                        su majestuosidad. Desde la mística Isla de Pascua, hogar de los enigmáticos moáis y sus leyendas
-                        ancestrales, hasta la gélida Antártida, un continente de hielo y glaciares donde la vida se abre
-                        paso en las condiciones más extremas, pasando por el árido desierto de Atacama, un lugar donde
+                <div class="col-md-6">
+                    <p> Chile te invita a descubrir una tierra de contrastes. Desde la mística Isla de Pascua hasta la
+                        gélida Antártida, pasando por el árido desierto de Atacama, un lugar donde
                         la tierra parece tocar el cielo y la vastedad del paisaje te invita a la introspección, cada
                         rincón de Chile te sorprenderá con su belleza única.
+                        <br>
+                        <br>
                         Recorre los valles viñedos del centro del país, donde la cepa se cultiva bajo un clima
                         mediterráneo ideal, degustando vinos de renombre mundial. Aventura en la Patagonia chilena,
                         navegando por sus fiordos y glaciares milenarios, o adéntrate en los bosques milenarios de la
-                        Araucanía, donde la cultura indígena aún vive con fuerza.</p>
-                    <div class="div-iconos bg-info text-center"><i class="fa-solid fa-mountain fa-2x m-1"></i></div>
-                </div>
-                <div class="col-4">
-                    <div class="div-iconos bg-info text-center mb-2"><i class="fa-solid fa-route fa-2x m-1"></i></div>
-                    <p>Para planificar tu viaje perfecto, contacta con nuestra agencia de viajes. Puedes visitarnos en
-                        nuestras oficinas ubicadas en las principales ciudades de Chile: Santiago, Valparaíso,
-                        Concepción, Temuco, Puerto Montt y Punta Arenas. También puedes contactarnos a través de nuestro
-                        sitio web
-                        estamos comprometidos con crear viajes a medida, diseñados para satisfacer las necesidades y
-                        preferencias de cada uno de nuestros clientes. Contamos con un equipo de expertos apasionados
-                        por Chile, quienes te acompañarán en la planificación de tu viaje, asesorándote en la elección
-                        de las rutas que mejor se adapten a tus intereses, ya sea que busques aventura, relax o
-                        simplemente conocer nuevos lugares
+                        Araucanía, donde la cultura indígena aún vive con fuerza.
                     </p>
                 </div>
             </div>
         </section>
 
         <section id="sectionDestacados">
-            <h2 class="text-center mt-5 mb-4 fw-normal">DESTACADOS</h2>
+            <h2 class="text-center mt-5 mb-4 fw-normal">Destacados</h2>
             <hr>
-            <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
                 <div class="col">
-                    <div class="card h-100 bg-info text-white">
-                        <img src="./assets/img/card1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Cordilleras y Ríos</h5>
-                            <p class="card-text">Los Andes, columna vertebral de Chile, regalan picos nevados, ríos
-                                caudalosos y valles verdes. Glaciares milenarios y volcanes activos completan la
-                                grandiosa cordillera.</p>
+                    <div class="card mb-3 text-dark p-0 h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-4 d-flex justify-content-start">
+                                <img src="./assets/img/card1.jpg" class="img-fluid h-100 rounded-start " alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body px-0 h-100 d-flex flex-column justify-content-between">
+                                    <h5 class="card-title ms-3">Región de Los Lagos</h5>
+                                    <p class="card-text ms-3">Conocida por sus lagos, volcanes y exuberante vegetación,
+                                        la Región de los Lagos ofrece paisajes naturales impresionantes.</p>
+                                    <div class="card-container__price bg-success">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col">
+                                                <p class="card-text"><small class="text-muted ms-3"><i
+                                                            class="fa-solid fa-plane-up"></i> Vuelos desde:
+                                                    </small>
+                                                </p>
+                                            </div>
+                                            <div class="col mb-2 mt-2">
+                                                <p class="card-text text-end me-2">$159.990</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col">
-                    <div class="card h-100 bg-info text-white">
-                        <img src="./assets/img/card2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Lagunas Altiplánicas</h5>
-                            <p class="card-text">Las lagunas altiplánicas, de aguas cristalinas, reflejan cielo y
-                                montañas. Flamencos rosados y salares surrealistas completan el paisaje.</p>
+                    <div class="card mb-3 text-dark p-0 h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-4 d-flex justify-content-start">
+                                <img src="./assets/img/card2.jpg" class="img-fluid h-100 rounded-start " alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body px-0 h-100 d-flex flex-column justify-content-between">
+                                    <h5 class="card-title ms-3">Desierto de Atacama</h5>
+                                    <p class="card-text ms-3">El Desierto de Atacama, uno de los más secos del mundo,
+                                        sorprende con sus paisajes lunares y cielos estrellados.</p>
+                                    <div class="card-container__price bg-success">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col">
+                                                <p class="card-text"><small class="text-muted ms-3"><i
+                                                            class="fa-solid fa-plane-up"></i> Vuelos desde:
+                                                    </small>
+                                                </p>
+                                            </div>
+                                            <div class="col mb-2 mt-2">
+                                                <p class="card-text text-end me-2">$189.990</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col">
-                    <div class="card h-100 bg-info text-white">
-                        <img src="./assets/img/card3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Desiertos y Salares</h5>
-                            <p class="card-text">Mar de sal bajo el sol. El Desierto de Atacama, el más árido del mundo,
-                                sorprende con paisajes lunares, géiseres y formaciones rocosas.</p>
+                    <div class="card mb-3 text-dark p-0 h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-4">
+                                <img src="./assets/img/card3.jpg" class="img-fluid h-100 rounded-start " alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body px-0 h-100 d-flex flex-column justify-content-between">
+                                    <h5 class="card-title ms-3">Norte Grande de Chile</h5>
+                                    <p class="card-text ms-3">El Norte Grande destaca por sus playas, pueblos pesqueros
+                                        y rica cultura precolombina.</p>
+                                    <div class="card-container__price bg-success ">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col">
+                                                <p class="card-text"><small class="text-muted ms-3"><i
+                                                            class="fa-solid fa-plane-up"></i> Vuelos desde:
+                                                    </small>
+                                                </p>
+                                            </div>
+                                            <div class="col mb-2 mt-2">
+                                                <p class="card-text text-end me-2">$289.990</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col">
-                    <div class="card h-100 bg-info text-white">
-                        <img src="./assets/img/card4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Selva Fría</h5>
-                            <p class="card-text">Verde esmeralda austral. La Patagonia chilena alberga una selva virgen
-                                con alerces milenarios, helechos y musgos. Cascadas y ríos caudalosos completan el
-                                paraíso natural.</p>
+                    <div class="card mb-3 text-dark p-0 h-100">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-4 d-flex justify-content-start">
+                                <img src="./assets/img/card4.jpg" class="img-fluid h-100 rounded-start " alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body px-0 h-100 d-flex flex-column justify-content-between">
+                                    <h5 class="card-title ms-3">Bosque Mágico</h5>
+                                    <p class="card-text ms-3">La Selva Valdiviana, un tesoro de biodiversidad, cautiva
+                                        con sus antiguos y mágicos bosques y ríos caudalosos.</p>
+                                    <div class="card-container__price bg-success">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col">
+                                                <p class="card-text"><small class="text-muted ms-3"><i
+                                                            class="fa-solid fa-plane-up"></i> Vuelos desde:
+                                                    </small>
+                                                </p>
+                                            </div>
+                                            <div class="col mb-2 mt-2">
+                                                <p class="card-text text-end me-2">$259.990</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <section id="sectionContacto">
-            <h2 class="text-center m-3 fw-normal">CONTACTO</h2>
+
+        <section id="sectionTestimonios">
+            <h2 class="text-center mt-5 mb-4 fw-normal">Testimonios</h2>
             <hr>
-            <form>
-                <div class="mb-3">
-                    <label for="inputNombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="inputNombre">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                    <div class="card h-100 bg-dark d-flex align-items-center border-dark text-white">
+                        <div class="card-body ">
+                            <p class="card-text text-center">Viajes Chile la rompió! Planeé un viaje a la Patagonia con
+                                ellos y fue increíble. Los paisajes son de otro mundo y los hoteles que me recomendaron
+                                eran top. Súper recomendado para los aventureros!</p>
+                        </div>
+                        <img src="./assets/img/testimonio1.jpg" class="card-img-top rounded-circle" alt="...">
+                        <h5 class="card-title pt-2 fw-normal">Mariela</h5>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="inputAsunto" class="form-label">Asunto</label>
-                    <input type="text" class="form-control" id="inputAsunto">
+
+                <div class="col">
+                    <div class="card h-100 bg-dark d-flex align-items-center border-dark text-white">
+                        <div class="card-body ">
+                            <p class="card-text text-center">Buscaba un viaje piola y Viajes Chile me armó un
+                                itinerario perfecto por el norte. Las playas, los pueblos y la comida fueron bakanes.
+                                La atención de los ejecutivos es un 7</p>
+                        </div>
+                        <img src="./assets/img/testimonio2.jpg" class="card-img-top rounded-circle" alt="...">
+                        <h5 class="card-title pt-2 fw-normal">Christian</h5>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="formControlMensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="formControlMensaje" rows="3"></textarea>
+
+                <div class="col">
+                    <div class="card h-100 bg-dark d-flex align-items-center border-dark text-white">
+                        <div class="card-body ">
+                            <p class="card-text text-center">Viajé a la Isla de Pascua con mi familia gracias a Viajes
+                                Chile. Todo salió perfecto, desde los vuelos hasta las excursiones. ¡Mis hijos quedaron
+                                fascinados con los moais! Si buscas un viaje en familia, no dudes en contactarlos.</p>
+                        </div>
+                        <img src="./assets/img/testimonio3.jpg" class="card-img-top rounded-circle" alt="...">
+                        <h5 class="card-title pt-2 fw-normal">Fernanda</h5>
+                    </div>
                 </div>
-                <button data-bs-toggle="mensaje" data-bs-title="Presiona para enviar" data-bs-placement="bottom"
-                    type="submit" class="btn btn-info text-white" id="enviarForm">Enviar</button>
-            </form>
-        </section>
+            </div>
+
+
+
+            <h2 class="text-center section__contact mt-5 mb-4" id="sectionContacto">Contacto</h2>
+            <hr>
+            <section class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+                <div class="col">
+
+                    <form class="row g-3" id="form__contact">
+
+                        <div class="col-6 col-md-6 ">
+                            <label for="inputName" class="form-label">Nombre
+                                <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="left"
+                                    title="Ingresa tu nombre y apellido"></i>
+                            </label>
+                            <input type="text" class="form-control" id="inputName">
+                        </div>
+
+                        <div class="col-6 col-md-6">
+                            <label for="inputEmail" class="form-label">Email <i class="fa-solid fa-circle-info"
+                                    data-bs-toggle="tooltip" data-bs-placement="left"
+                                    title="Ingresa tu email personal"></i></label>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
+
+                        <div class="col-12 col-md-12 mb-3">
+                            <label for="inputMessage" class="form-label">Mensaje <i class="fa-solid fa-circle-info"
+                                    data-bs-toggle="tooltip" data-bs-placement="left"
+                                    title="Qué nos quieres contar"></i></label>
+                            <textarea class="form-control" id="inputMessage" rows="2"></textarea>
+
+                            <div class="mt-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                                    <a class="text-success" data-bs-toggle="modal"
+                                        data-bs-target="#aceptoTerminosyCondiciones">
+                                        Acepto los términos y condiciones
+                                    </a>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="aceptoTerminosyCondiciones" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title text-dark" id="exampleModalLabel">Política de
+                                                        reembolso</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Cerrar"></button>
+                                                </div>
+                                                <div class="modal-body text-dark">
+                                                    <p><strong>Términos y Condiciones - Viajes Chile</strong></p>
+                                                    <p>Al reservar con Viajes Chile, aceptas lo siguiente:</p>
+                                                    <ul>
+                                                        <li><strong>Servicios:</strong> Ofrecemos reservación de vuelos,
+                                                            hoteles y otros servicios turísticos.</li>
+                                                        <li><strong>Pagos:</strong> Los pagos se realizan según las
+                                                            formas indicadas.</li>
+                                                        <li><strong>Anulación y Reembolsos:</strong></li>
+                                                        <ul>
+                                                            <li><strong>Notificación:</strong> Toda anulación debe ser
+                                                                informada a Viajes Chile con al menos 24 horas de
+                                                                anticipación a la fecha del servicio.</li>
+                                                            <li><strong>Reembolso:</strong> Se reembolsará el 90% del
+                                                                valor total de la reserva, siempre y cuando la anulación
+                                                                se realice dentro del plazo establecido.</li>
+                                                            <li><strong>Exepciones:</strong> Las políticas de
+                                                                cancelación pueden variar según el proveedor y el tipo
+                                                                de servicio. En algunos casos, los servicios podrían ser
+                                                                no reembolsables.</li>
+                                                        </ul>
+                                                        <li><strong>Responsabilidad:</strong> Actuamos como
+                                                            intermediarios. No somos responsables por eventos fuera de
+                                                            nuestro control (como retrasos de vuelos, desastres
+                                                            naturales).</li>
+                                                        <li><strong>Documentación:</strong> Es tu responsabilidad tener
+                                                            toda la documentación necesaria para viajar.</li>
+                                                        <li><strong>Privacidad:</strong> Protegemos tus datos
+                                                            personales.</li>
+                                                        <li><strong>Ley aplicable:</strong> Se rige por las leyes
+                                                            chilenas</li>
+                                                    </ul>
+                                                    <p>Para más detalles, consulta nuestra página web.</p>
+                                                    <p><strong>¡Buen viaje!</strong></p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Estoy de acuerdo</button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        You must agree before submitting.
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="d-grid d-md-flex">
+                                <button type="submit" class="btn btn-primary mt-3" id="btn-send">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col bg-dark d-flex align-items-center">
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                                <th class="bg-dark" scope="row"><i class="fa-solid fa-phone text-success"></i></th>
+                                <td class="bg-dark text-success">+569 74983772</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-dark" scope="row"><i class="fa-solid fa-envelope text-success"></i>
+                                </th>
+                                <td class="bg-dark text-success">contacto@viajeschile.com</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-dark" scope="row"><i class="fa-brands fa-linkedin text-success"></i>
+                                </th>
+                                <td class="bg-dark text-success"><a class="text-decoration-none text-success"
+                                        href="https://www.linkedin.com/in/munozlorcadaniel/"
+                                        target="_blank">ViajesChile</a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="bg-dark" scope="row"><i class="fa-brands fa-instagram text-success"></i>
+                                </th>
+                                <td class="bg-dark">
+                                    <a class="text-decoration-none text-success"
+                                        href="https://www.instagram.com/munozlorcadaniel?igsh=MWg0M2poNDE3YTZ0Yg=="
+                                        target="_blank">viajes_chile</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
     </article>
 
+    <!-- Lo movi al js y reemplacé el bootstrap.bundle para que funcione, sino 
+    dejaba de funcionar entre otras cosas el carousel -->
+    <!-- <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
 
-    <!--Footer, tiene vínculos hacia las RRSS.Aquí noto que el tooltip funciona bien cuando uno hace hover pero queda mostrándose cuando uno pincha el link y vuelve a desaparecer cuando uno pincha en cualquier parte de la página   -->
-    <footer class="p-2 bg-info">
-        <div class="row">
-            <div class="col-6 div-footer text-white text-center mt-2">
-                <h3 class="fw-normal">VIAJES CHILE</h3>
-            </div>
-            <div class="col-6 text-center mt-1">
-                <a data-bs-toggle="mensaje" data-bs-title="ir a GitHub" data-bs-placement="top"
-                    href="https://github.com/" target="_blank"><i class="fa-brands fa-github m-1 fa-2x"></i></a>
-                <a data-bs-toggle="mensaje" data-bs-title="ir a LinkedIn" data-bs-placement="top"
-                    href="https://www.linkedin.com/in/munozlorcadaniel" target="_blank"><i
-                        class="fa-brands fa-linkedin m-1 fa-2x"></i></a>
-                <a data-bs-toggle="mensaje" data-bs-title="ir a X" data-bs-placement="top"
-                    href="https://x.com/Danish_mlorc" target="_blank"><i
-                        class="fa-brands fa-square-twitter m-1 fa-2x"></i></a>
-                <a data-bs-toggle="mensaje" data-bs-title="ir a Facebook" data-bs-placement="top"
-                    href="https://www.facebook.com/daniel.munozlorca/" target="_blank"><i
-                        class="fa-brands fa-facebook m-1 fa-2x"></i></a>
-            </div>
-        </div>
-        </div>
-    </footer>
-
-    <!-- bootstrap min.js-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-    <script src="./assets/js/script.js"></script>
-
-    <!-- jQuery, quise incorporar JQuery porque estaba en la lista de contenidos a aplicar, no obstante que no solicitaba algo en particular-->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-    <script>
-
-        $("#enviarForm").click(function () {
-            alert("El mensaje fué enviado correctamente");
-        });
-    </script>
+    <script type="module" src="./assets/js/script.js"></script>
 
 </body>
 

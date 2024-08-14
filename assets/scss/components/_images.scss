@@ -1,0 +1,16 @@
+.card-img-top {
+    height: 70px;
+    width: 70px;
+    border: 1px solid white;
+}
+
+.carousel__image {
+    height: 500px;
+}
+
+
+@media (max-width: 768px) {
+    .carousel__image {
+        height: 300px;
+    }
+}
